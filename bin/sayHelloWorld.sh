@@ -2,6 +2,7 @@
 
 echo "Saying helloWorld!"
 
-cat "Gilbert Lau" > ~/gilbert.txt
+touch gilbert
+
 
 
