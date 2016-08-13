@@ -2,7 +2,7 @@
 
 echo "Saying helloWorld!"
 
-touch home/opc/gilbert
+touch /home/opc/gilbert.txt
 
 
 
