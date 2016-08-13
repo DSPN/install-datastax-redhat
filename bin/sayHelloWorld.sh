@@ -2,7 +2,7 @@
 
 echo "Saying helloWorld!"
 
-touch ~/gilbert
+touch home/opc/gilbert
 
 
 
