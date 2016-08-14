@@ -3,13 +3,15 @@ cloud_type=$1
 echo "Installing OpsCenter"
 
 echo "Adding the DataStax repository"
-if [[ $cloud_type == "gce" ]] || [[ $cloud_type == "gke" ]]; then
-  echo "deb http://datastax%40google.com:8GdeeVT2s7zi@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
-else
-  echo "deb http://datastax%40microsoft.com:3A7vadPHbNT@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
-fi
+# temporarily using @google.com DS academy account, need to create one for Oracle Compute Cloud (OCC)
+echo | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo "[opscenter] " | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo "name = DataStax Repository" | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo "baseurl = http://rpm.datastax.com/community" | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo "enabled=1" | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo "gpgcheck=0" | sudo tee -a /etc/yum.repos.d/datastax.repo
 
-curl -L http://debian.datastax.com/debian/repo_key | sudo apt-key add -
+# Ready to install OpsCenter
+opscenter_version=6.0.1
+yum -y install opscenter=$opscenter_version
 
-apt-get update
-apt-get -y install opscenter=6.0.1
