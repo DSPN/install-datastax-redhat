@@ -36,6 +36,7 @@ if [[ $cloud_type == "azure" ]]; then
 fi
 
 ./os/install_java.sh
+./os/install_python27.sh
 ./opscenter/install.sh $cloud_type
 
 if [[ $cloud_type == "azure" ]]; then
