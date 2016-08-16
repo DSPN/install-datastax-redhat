@@ -9,9 +9,9 @@ echo "Configuring OpsCenter with the settings:"
 echo cloud_type \'$cloud_type\'
 echo seed_node_ip \'$seed_node_ip\'
 
-./os/install_java.sh
-./os/install_python27.sh
-./opscenter/install.sh $cloud_type
+./os/install_java.sh >> ./os/install_java.sh.log
+./os/install_python27.sh >> ./os/install_python27.sh.log
+./opscenter/install.sh $cloud_type >> ./opscenter/install.sh.out
 
 ./opscenter/start.sh
 
