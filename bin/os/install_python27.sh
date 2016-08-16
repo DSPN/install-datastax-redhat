@@ -24,5 +24,5 @@ ln -s /usr/local/bin/python2.7 /usr/local/bin/python
 # Still have problem running the command below coz repo does not contain python27
 yum install -y python27
 
-scl enable python27 bash
-export PYTHONPATH="/usr/lib/python2.7/site-packages/":$PYTHONPATH
+#scl enable python27 bash
+#export PYTHONPATH="/usr/lib/python2.7/site-packages/":$PYTHONPATH
