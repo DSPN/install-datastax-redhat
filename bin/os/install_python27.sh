@@ -3,12 +3,12 @@
 # Install python 2.7
 
 # To compile Python you must first install the development tools
-yum -y groupinstall "Development tools"
-yum -y install zlib-devel
-yum -y install bzip2-devel
-yum -y install openssl-devel
-yum -y install ncurses-devel
-yum -y install sqlite-devel
+sudo yum -y groupinstall "Development tools"
+sudo yum -y install zlib-devel
+sudo yum -y install bzip2-devel
+sudo yum -y install openssl-devel
+sudo yum -y install ncurses-devel
+sudo yum -y install sqlite-devel
 
 # Now to download, compile and install Python 2.7
 cd /opt
