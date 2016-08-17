@@ -17,7 +17,7 @@ yum -y install xz
 
 # Now to download, compile and install Python 2.7
 cd /opt
-curl -k -o Python-2.7.9.tar.xz https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
+curl -o Python-2.7.9.tar.xz https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
 unxz Python-2.7.9.tar.xz
 tar -xf Python-2.7.9.tar
 cd Python-2.7.9
