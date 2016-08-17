@@ -14,7 +14,7 @@ sudo yum -y install sqlite-devel
 cd /opt
 sudo curl -o Python-2.7.11.tar.xz https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
 sudo tar xf Python-2.7.11.tar.xz
-sudo cd Python-2.7.11
+cd Python-2.7.11
 sudo ./configure --prefix=/usr/local
 sudo make
 sudo make altinstall
