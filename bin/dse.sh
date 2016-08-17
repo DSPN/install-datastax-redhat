@@ -30,9 +30,9 @@ echo opscenter_ip \'$opscenter_ip\'
 #### Ok, now let's starting making changes to the system...
 
 # Installing prerequisite software components for DSE 5.0.x
-./os/install_java.sh >> ./os/install_java.sh.log
-./os/install_python27.sh >> ./os/install_python27.sh.log
-./os/install_glibc_OEL6x.sh >> ./os/install_glibc_OEL6x.sh.log
+./os/install_java.sh
+./os/install_python27.sh
+./os/install_glibc_OEL6x.sh
 
 # OpsCenter uses iostat and Ubuntu 14.04 LTS doesn't seem to have it installed by default.
 yum -y install sysstat
