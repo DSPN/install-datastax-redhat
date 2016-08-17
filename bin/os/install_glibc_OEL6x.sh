@@ -10,5 +10,5 @@ curl -o public-yum-ol6.repo http://public-yum.oracle.com/public-yum-ol6.repo
 
 # Ready to install glibc.i686
 yum list
-yum install -y glibc.i686
+sudo yum install -y glibc.i686
 
