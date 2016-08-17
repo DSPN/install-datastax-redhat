@@ -11,7 +11,7 @@ sudo yum -y install bzip2-devel
 sudo yum -y install openssl-devel
 sudo yum -y install ncurses-devel
 sudo yum -y install sqlite-devel
-sudo yum -y xz
+sudo yum -y install xz
 
 # Now to download, compile and install Python 2.7
 cd /opt
@@ -28,6 +28,5 @@ sudo make install
 
 #scl enable python27 bash
 #export PYTHONPATH="/usr/lib/python2.7/site-packages/":$PYTHONPATH
-
 
 echo "leaving install_python27.sh"  >> install_python27.sh.out
