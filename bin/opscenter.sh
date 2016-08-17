@@ -2,6 +2,7 @@
 
 echo "Running install-datastax/bin/opscenter.sh"
 
+# opc or bare-metal
 cloud_type=$1
 seed_node_ip=$2
 

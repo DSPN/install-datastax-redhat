@@ -4,6 +4,8 @@
 
 echo "reached install_python27.sh"  >> install_python27.sh.out
 
+# do we need sudo here?
+
 # To compile Python you must first install the development tools
 sudo yum -y groupinstall "Development tools"
 sudo yum -y install zlib-devel

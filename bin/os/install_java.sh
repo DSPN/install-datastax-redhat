@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+##### We should install the oracl jdk instead of openjdk
 echo "Installing the Oracle JDK"
 
 echo "reached install_java.sh"  >> install_java.sh.out

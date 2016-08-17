@@ -2,22 +2,15 @@
 
 echo "Running install-datastax-redhat/bin/dse.sh"
 
+# opc or bare-metal
 cloud_type=$1
 seed_node_ip=$2
 data_center_name=$3
 opscenter_ip=$4
 
-if [[ $cloud_type == "gce" ]] || [[ $cloud_type == "gke" ]]; then
-  # On Google private IPs are globally routable within GCE
-  # We've also been seeing issues using the public ones for broadcast.
-  # So, we're just going to use the private for everything.
-  # We're still trying to figure out GKE, but only supporting 1 DC for now, so this ought to work.
-  node_broadcast_ip=`echo $(hostname -I)`
-  node_ip=`echo $(hostname -I)`
-else
-  node_broadcast_ip=`curl --retry 10 icanhazip.com`
-  node_ip=`echo $(hostname -I)`
-fi
+# should use meta data service instead
+node_broadcast_ip=`curl --retry 10 icanhazip.com`
+node_ip=`echo $(hostname -I)`
 
 echo "Configuring nodes with the settings:"
 echo cloud_type \'$cloud_type\'
@@ -34,7 +27,8 @@ echo opscenter_ip \'$opscenter_ip\'
 ./os/install_python27.sh
 ./os/install_glibc_OEL6x.sh
 
-# OpsCenter uses iostat and Ubuntu 14.04 LTS doesn't seem to have it installed by default.
+# OpsCenter uses iostat
+# does OL have this by default?  If so, then don't install...
 yum -y install sysstat
 
 ./dse/install.sh $cloud_type
@@ -42,4 +36,3 @@ yum -y install sysstat
 ./dse/configure_cassandra_yaml.sh $node_ip $node_broadcast_ip $seed_node_ip
 ./dse/configure_agent_address_yaml.sh $node_ip $node_broadcast_ip $opscenter_ip
 ./dse/start.sh
-
