@@ -9,12 +9,14 @@ sudo yum -y install bzip2-devel
 sudo yum -y install openssl-devel
 sudo yum -y install ncurses-devel
 sudo yum -y install sqlite-devel
+sudo yum -y xz
 
-# Now to download, compile and install Python 2.7
+# Now to download, compile and install Python 2.6
 cd /opt
-sudo curl -o Python-2.7.11.tar.xz https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
-sudo tar xf Python-2.7.11.tar.xz
-cd Python-2.7.11
+sudo curl -o Python-2.7.9.tar.xz https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
+sudo unxz Python-2.7.9.tar.xz
+sudo tar -xf Python-2.7.9.tar
+cd Python-2.7.9
 sudo ./configure --prefix=/usr/local
 sudo make
 sudo make install
