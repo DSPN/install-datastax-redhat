@@ -2,6 +2,8 @@
 
 echo "Installing the Oracle JDK"
 
+echo "reached install_java.sh"  >> install_java.sh.out
+
 # Install add-apt-repository
 yum -y install software-properties-common
 
@@ -16,3 +18,4 @@ yum install -y java-1.8.0-openjdk
 # nothing if the first install was successful and I suspect will eliminate the majority of our failures.
 #yum install -y java-1.8.0-openjdk
 
+echo "leaving install_java.sh"  >> install_java.sh.out
