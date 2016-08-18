@@ -7,13 +7,13 @@ echo "Adding the DataStax repository"
 # are we, I don't see it here...
 # temporarily using @google.com DS academy account, need to create one for Oracle Compute Cloud (OCC)
 
-echo | sudo tee -a /etc/yum.repos.d/datastax.repo
-echo "[opscenter] " | sudo tee -a /etc/yum.repos.d/datastax.repo
-echo "name = DataStax Repository" | sudo tee -a /etc/yum.repos.d/datastax.repo
-echo "baseurl = http://rpm.datastax.com/community" | sudo tee -a /etc/yum.repos.d/datastax.repo
-echo "enabled=1" | sudo tee -a /etc/yum.repos.d/datastax.repo
-echo "gpgcheck=0" | sudo tee -a /etc/yum.repos.d/datastax.repo
+echo | tee -a /etc/yum.repos.d/datastax.repo
+echo "[opscenter] " | tee -a /etc/yum.repos.d/datastax.repo
+echo "name = DataStax Repository" | tee -a /etc/yum.repos.d/datastax.repo
+echo "baseurl = http://rpm.datastax.com/community" | tee -a /etc/yum.repos.d/datastax.repo
+echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
+echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
 
 # Ready to install OpsCenter
-opscenter_version=6.0.2
+opscenter_version=5.2.4-1
 yum -y install opscenter-$opscenter_version
