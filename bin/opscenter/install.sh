@@ -16,4 +16,4 @@ echo "gpgcheck=0" | sudo tee -a /etc/yum.repos.d/datastax.repo
 
 # Ready to install OpsCenter
 opscenter_version=6.0.2
-yum -y install opscenter=$opscenter_version
+yum -y install opscenter-$opscenter_version
