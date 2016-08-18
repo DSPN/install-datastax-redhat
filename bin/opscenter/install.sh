@@ -10,10 +10,10 @@ echo "Adding the DataStax repository"
 echo | tee -a /etc/yum.repos.d/datastax.repo
 echo "[opscenter] " | tee -a /etc/yum.repos.d/datastax.repo
 echo "name = DataStax Repository" | tee -a /etc/yum.repos.d/datastax.repo
-echo "baseurl = http://rpm.datastax.com/community" | tee -a /etc/yum.repos.d/datastax.repo
+echo "baseurl=https://datastax%40google.com:8GdeeVT2s7zi@rpm.datastax.com/enterprise" | tee -a /etc/yum.repos.d/datastax.repo
 echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
 echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
 
 # Ready to install OpsCenter
-opscenter_version=5.2.4-1
+opscenter_version=6.0.2-1
 yum -y install opscenter-$opscenter_version
