@@ -26,8 +26,8 @@ make
 make altinstall
 
 # Link Python 2.7 to /usr/bin/python
-rm /usr/bin/python
-ln -s /usr/local/bin/python2.7 /usr/bin/python
+rm /usr/local/bin/python
+ln -s /usr/local/bin/python2.7 /usr/local/bin/python
 
 # export PYTHONPATH for 2.7
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages/":$PYTHONPATH
