@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 echo "Starting OpsCenter"
-sudo service opscenterd start
+service opscenterd start
