@@ -28,7 +28,7 @@ echo opscenter_ip \'$opscenter_ip\'
 ./os/install_glibc_OEL6x.sh
 
 # OpsCenter uses iostat
-# does OL have this by default?  If so, then don't install...
+# OEL 6.7 does not have sysstat pre-installed
 yum -y install sysstat
 
 ./dse/install.sh $cloud_type

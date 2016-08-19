@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Running install-datastax/bin/opscenter.sh"
+echo "Running install-datastax-redhat/bin/opscenter.sh"
 
 # opc or bare-metal
 cloud_type=$1
