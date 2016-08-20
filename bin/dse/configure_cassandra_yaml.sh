@@ -12,9 +12,9 @@ broadcast_rpc_address=$node_broadcast_ip
 
 endpoint_snitch="GossipingPropertyFileSnitch"
 num_tokens=64
-data_file_directories="/mnt/data"
-commitlog_directory="/mnt/commitlog"
-saved_caches_directory="/mnt/saved_caches"
+data_file_directories="/mnt/data1/cassandra/data"
+commitlog_directory="/mnt/data1/cassandra/commitlog"
+saved_caches_directory="/mnt/data1/saved_caches"
 phi_convict_threshold=12
 auto_bootstrap="false"
 
