@@ -26,5 +26,5 @@ opscenter_version=6.0.2
 yum -y install datastax-agent-$opscenter_version
 
 # The install of dse creates a cassandra user, so now we can do this:
-chown cassandra /mnt
-chgrp cassandra /mnt
+chown cassandra -R /mnt
+chgrp cassandra -R /mnt

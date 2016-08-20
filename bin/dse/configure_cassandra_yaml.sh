@@ -14,7 +14,7 @@ endpoint_snitch="GossipingPropertyFileSnitch"
 num_tokens=64
 data_file_directories="/mnt/data1/cassandra/data"
 commitlog_directory="/mnt/data1/cassandra/commitlog"
-saved_caches_directory="/mnt/data1/saved_caches"
+saved_caches_directory="/mnt/data1/cassandra/saved_caches"
 phi_convict_threshold=12
 auto_bootstrap="false"
 
