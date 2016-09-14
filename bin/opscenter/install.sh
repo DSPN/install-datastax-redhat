@@ -15,5 +15,5 @@ echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
 echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
 
 # Ready to install OpsCenter
-opscenter_version=6.0.2-1
+opscenter_version=6.0.2
 yum -y install opscenter-$opscenter_version
