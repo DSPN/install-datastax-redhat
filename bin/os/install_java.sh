@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
 
-##### We should install the Oracle JDK instead of openjdk
-echo "Installing the Open JDK"
+echo "Installing the Oracle Java 8 JDK"
 
-echo "reached install_java.sh"  >> install_java.sh.out
-
-# Install add-apt-repository
-yum -y install software-properties-common
-
-yum -y update
-yum install -y java-1.8.0-openjdk
-
-echo "leaving install_java.sh"  >> install_java.sh.out
+cd ~
+wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.rpm"
+yum localinstall jdk-8u60-linux-x64.rpm
