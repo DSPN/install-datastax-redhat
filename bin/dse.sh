@@ -24,7 +24,10 @@ echo opscenter_ip \'$opscenter_ip\'
 
 # Installing prerequisite software components for DSE 5.0.x
 ./os/install_java.sh
-./os/install_python27.sh
+# occ currently supports OEL 6.x and has python 2.5 only
+if [ "$cloud_type" == "occ" ]; then
+  ./os/install_python27.sh
+fi
 ./os/install_glibc_OEL6x.sh
 
 # OpsCenter uses iostat
