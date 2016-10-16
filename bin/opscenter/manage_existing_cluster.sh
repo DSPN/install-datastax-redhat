@@ -2,7 +2,7 @@
 
 seed_node_ip=$1
 
-sudo tee config.json > /dev/null <<EOF
+tee config.json > /dev/null <<EOF
 {
   "cassandra": {
     "seed_hosts": "$seed_node_ip"
