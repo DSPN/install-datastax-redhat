@@ -11,5 +11,5 @@ echo "baseurl=https://datastax%40google.com:8GdeeVT2s7zi@rpm.datastax.com/enterp
 echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
 echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
 
-opscenter_version=6.0.3
+opscenter_version=6.0.5
 yum -y install opscenter-$opscenter_version
