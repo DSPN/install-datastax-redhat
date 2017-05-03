@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Reached manage_existing_cluster.sh" >> manage_existing_cluster.sh.out
+
 seed_node_ip=$1
 
 tee config.json > /dev/null <<EOF
