@@ -21,4 +21,4 @@ while [ "${output}" != "\"Test_Cluster\"" ]; do
 done
 
 echo $output >> manage_existing_cluster.sh.out
-echo "Done manage_existing_cluster.sh" >> manage_existing_cluster.sh
+echo "Done manage_existing_cluster.sh" >> manage_existing_cluster.sh.out
