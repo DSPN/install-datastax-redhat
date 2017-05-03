@@ -19,3 +19,6 @@ while [ "${output}" != "\"Test_Cluster\"" ]; do
     output=`curl -X POST http://127.0.0.1:8888/cluster-configs -d @config.json`
     echo $output
 done
+
+echo $output >> manage_existing_cluster.sh.out
+echo "Done manage_existing_cluster.sh" >> manage_existing_cluster.sh
