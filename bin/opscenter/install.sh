@@ -2,8 +2,6 @@
 cloud_type=$1
 echo "Installing OpsCenter"
 
-# temporarily using @google.com DS academy account, need to create one for Oracle
-
 echo | tee -a /etc/yum.repos.d/datastax.repo
 echo "[opscenter] " | tee -a /etc/yum.repos.d/datastax.repo
 echo "name = DataStax Repository" | tee -a /etc/yum.repos.d/datastax.repo
