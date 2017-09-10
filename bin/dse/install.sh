@@ -8,8 +8,7 @@ echo "Adding the DataStax repository"
 echo "[datastax]" | tee -a /etc/yum.repos.d/datastax.repo
 echo "name = DataStax Repo for DataStax Enterprise" | tee -a /etc/yum.repos.d/datastax.repo
 
-# temporarily using @google.com DS academy account, need to create one for Oracle Compute Cloud (OCC)
-echo "baseurl=https://datastax%40google.com:8GdeeVT2s7zi@rpm.datastax.com/enterprise" | tee -a /etc/yum.repos.d/datastax.repo
+echo "baseurl=https://datastax%40oracle.com:*9En9HH4j^p4@rpm.datastax.com/enterprise" | tee -a /etc/yum.repos.d/datastax.repo
 
 echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
 echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
