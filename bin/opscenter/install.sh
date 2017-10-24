@@ -9,5 +9,5 @@ echo "baseurl=https://datastax%40oracle.com:*9En9HH4j^p4@rpm.datastax.com/enterp
 echo "enabled=1" | tee -a /etc/yum.repos.d/datastax.repo
 echo "gpgcheck=0" | tee -a /etc/yum.repos.d/datastax.repo
 
-opscenter_version=6.1.0
+opscenter_version=6.1.4
 yum -y install opscenter-$opscenter_version
