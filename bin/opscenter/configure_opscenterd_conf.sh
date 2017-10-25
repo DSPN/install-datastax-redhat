@@ -3,7 +3,7 @@
 opscenter_broadcast_ip=$1
 
 file="/etc/opscenter/opscenterd.conf"
-echo "Adding the broadcast IP to opscenterd.conf"
-echo "[agents]" >> $file
-echo "reported_interface=$opscenter_broadcast_ip" >> $file
+echo "Adding disable_platform_check to disable OS check"
+echo "[lifecycle_manager]" >> $file
+echo "disable_platform_check = True" >> $file
 echo "" >> $file
